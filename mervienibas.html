@@ -8,13 +8,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function mega(){
+                var gb=document.getElementById("gb").value;
+                document.getElementById("mb").value = Number(gb)*1000
+            }
+            function mibi(){
+                var gb=document.getElementById("gb").value;
+                document.getElementById("mib").value = Number(gb)*953.674316
+            }
+        </script>
+        <style>
+            body{
+                background-image: url(images/cipari.jpg);
+            }
+            form{
+                font-size:20px;
+                background-color: rgb(220, 220, 0);
+            }
+        </style>
     </head>
     <body>
         <h1>Informācijas daudzuma mēŗvienības</h1>
         <form>
             <p><input type="text" value="gb" id="gb">GB=</p>
-            <p><input type="button" value="Izteikt megabaitos"> <input type="text" value="mb" id="mb">MB</p>
-            <p><input type="button" value="Izteikt mibibaitos"> <input type="text" value="mib" id="mib">MiB</p>
+            <p><input type="button" value="Izteikt megabaitos" onclick="mega();"> <input type="text" value="mb" id="mb">MB</p>
+            <p><input type="button" value="Izteikt mibibaitos" onclick="mibi();"> <input type="text" value="mib" id="mib">MiB</p>
         </form>
     </body>
 </html>
